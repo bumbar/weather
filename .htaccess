@@ -1,0 +1,4 @@
+<IfModule mod_fcgid.c>
+AddHandler fcgid-script .php
+FcgidWrapper /home/kultura/public_html/weather/php.fcgi .php
+</IfModule>
