@@ -73,4 +73,19 @@ class SetWeather extends Command
             Setting::save();
         }
     }
+
+    private function curlGetFileContents($URL)
+    {
+        $c = curl_init();
+        curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($c, CURLOPT_URL, $URL);
+        $contents = curl_exec($c);
+        curl_close($c);
+
+        if ($contents) {
+            return $contents;
+        } else {
+            return false;
+        }
+    }
 }

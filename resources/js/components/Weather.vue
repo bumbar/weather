@@ -4,10 +4,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Weather Component</div>
-
                     <div class="card-body">
-
-                        <div>
                             <ul class="list-group list-group-horizontal">
                                 <li class="list-group-item" v-for="item in items">
                                     {{ item.day }}
@@ -15,8 +12,6 @@
                                     {{ item.temperature.toFixed(0) }} &#8451;
                                 </li>
                             </ul>
-                        </div>
-
                         <select @click="onChange()" v-model="selected">
                             <option value="Sofia">Sofia</option>
                             <option value="Plovdiv">Plovdiv</option>
